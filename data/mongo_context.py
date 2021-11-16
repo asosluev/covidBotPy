@@ -28,11 +28,11 @@ class MongoDbContext:
         queries = countries_stats.aggregate([
             {'$group': {'_id': '$country', 'count': {'$sum': 1}}},
             {'$sort': {'count': -1}},
-            {'$limit': 5}
+            {'$limit': 10}
         ])
         users = countries_stats.aggregate([
             {'$group': {'_id': '$username', 'count': {'$sum': 1}}},
             {'$sort': {'count': -1}},
-            {'$limit': 5}
+            {'$limit': 10}
         ])
         return {'queries': list(queries), 'users': list(users)}

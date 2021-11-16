@@ -1,10 +1,14 @@
-<b>🏳 Top 5 viewed country for today!</b>
+
+<b>............ТЕСТОВИЙ РЕЖИМ......</b>
+
+
+<b>🏳 ТОП 10 країн по яких шукають інформацію</b>
 
 {% for query in queries -%}
     💥 {{ query._id }} : {{ query.count }} time(s)
 {% endfor %}
 
-<b>🤯 Top 5 users for today!</b>
+<b>🤯 ТОП 10 найактивніших юзерів</b>
 
 {% for user in users -%}
     💥 {{ user._id }} : {{ user.count }} time(s)
